@@ -94,5 +94,6 @@ for i in range(5):
     else:
         print("Your answer is Wrong ! \n")
         print(gk_questions[random_number]["question"] , "\n")
+        print(gk_questions[random_number]["options"], "\n")
         User_answer = input(" \n Enter your options? (A, B, C, D) : ")
         User_answer = User_answer[0].upper()
