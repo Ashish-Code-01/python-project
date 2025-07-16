@@ -1,6 +1,38 @@
+# Membership Operators: in, not in
+nums = [1, 2, 3]
+print(2 in nums)  # True
+print(4 not in nums)  # True
+
+# Identity Operators: is, is not
+m = [1, 2]
+n = m
+print(m is n)  # True
+print(m is not nums)  # True
+# Identity Operators: is, is not
+m = [1, 2]
+n = m
+print(m is n)  # True
+print(m is not nums)  # True
 # ==========================================================
 # Python Programming Notes
 # ==========================================================
+
+# 0. Loop Concepts
+# ----------------
+# For loop: Iterates over a sequence (list, tuple, string, etc.)
+for i in range(5):
+    print(f"For loop iteration: {i}")
+
+# While loop: Repeats as long as a condition is true
+count = 0
+while count < 3:
+    print(f"While loop count: {count}")
+    count += 1
+
+# Nested loops: Loop inside another loop
+for i in range(2):
+    for j in range(2):
+        print(f"Nested loop: i={i}, j={j}")
 
 
 # 1. Recursion
@@ -26,12 +58,36 @@ s2 = {5, 6, 7, 8, 8, 4}  # Note: duplicate 8 will be removed
 s1.update(s2)  # Combines both sets, removing duplicates
 # print(s1)  # Output: {1, 2, 3, 4, 5, 6, 7, 8}
 
+# Creating a set from a list
+my_list = [1, 2, 2, 3, 4]
+my_set = set(my_list)
+# print(my_set)  # Output: {1, 2, 3, 4}
+
+# Set operations
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+union = set_a | set_b  # {1, 2, 3, 4, 5}
+intersection = set_a & set_b  # {3}
+# print(union, intersection)
+
 # 3. Dictionaries
 # --------------
 # Dictionaries are key-value pairs
 # Basic dictionary
 person = {"name": "Ashu", "age": 18}
 # print(person["name"])  # Accessing value using key
+
+# Creating a dictionary
+student = {"id": 101, "name": "John", "marks": 88}
+# print(student["marks"])
+
+# Iterating over dictionary
+for key, value in student.items():
+    print(f"Key: {key}, Value: {value}")
+
+# Dictionary comprehension
+square_dict = {x: x * x for x in range(1, 4)}
+# print(square_dict)  # Output: {1: 1, 2: 4, 3: 9}
 
 # Dictionary methods
 info = {"name": "Ashu", "age": 18, "eligibility": True}
@@ -47,6 +103,20 @@ for i in range(1, 5):
         break
 else:
     print("Loop completed normally")
+
+# 12. Tuples
+# ----------
+# Tuples are immutable sequences, typically used to store collections of heterogeneous data
+my_tuple = (10, 20, 30)
+# print(my_tuple[1])  # Output: 20
+
+# Tuple unpacking
+a, b, c = my_tuple
+# print(a, b, c)  # Output: 10 20 30
+
+# Tuples can be used as dictionary keys
+location = {(10, 20): "Point A", (30, 40): "Point B"}
+# print(location[(10, 20)])  # Output: Point A
 
 
 # 5. Exception Handling
@@ -159,3 +229,70 @@ longest_name = reduce(lambda x, y: x if len(x) > len(y) else y, names)
 # =========================================================
 # End of Python Programming Notes
 # =========================================================
+
+# Python Topics Overview
+# ---------------------
+# 1. Operators
+# 2. If-Else Statements
+# 3. Loop Concepts
+# 4. Recursion
+# 5. Sets
+# 6. Dictionaries
+# 7. Tuples
+# 8. Exception Handling
+# 9. Shorthand If-Else (Ternary Operator)
+# 10. Enumerate Function
+# 11. Global and Local Variables
+# 12. File Input/Output
+# 13. Lambda Functions
+# 14. Functional Programming (Map, Filter, Reduce)
+
+# 1. Operators
+# ------------
+# Arithmetic Operators: +, -, *, /, %, //, **
+a, b = 10, 3
+print(a + b)  # Addition: 13
+print(a - b)  # Subtraction: 7
+print(a * b)  # Multiplication: 30
+print(a / b)  # Division: 3.333...
+print(a // b)  # Floor Division: 3
+print(a % b)  # Modulus: 1
+print(a**b)  # Exponentiation: 1000
+
+# Comparison Operators: ==, !=, >, <, >=, <=
+print(a == b)  # False
+print(a != b)  # True
+print(a > b)  # True
+print(a < b)  # False
+
+# Logical Operators: and, or, not
+x, y = True, False
+print(x and y)  # False
+print(x or y)  # True
+print(not x)  # False
+
+# Assignment Operators: =, +=, -=, *=, /=, etc.
+c = 5
+c += 2  # c = c + 2
+print(c)  # 7
+
+# Membership Operators: in, not in
+nums = [1, 2, 3]
+print(2 in nums)  # True
+print(4 not in nums)  # True
+
+# Identity Operators: is, is not
+m = [1, 2]
+
+print(m is n)  # True
+print(m is not nums)  # True
+
+# 2. If-Else Statements
+# ---------------------
+num = 7
+if num > 0:
+    print("Positive")
+elif num == 0:
+    print("Zero")
+else:
+    print("Negative")
